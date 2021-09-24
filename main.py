@@ -10,26 +10,26 @@ WIN = pygame.display.set_mode((WIDTH, HEIGHT))
 pygame.display.set_caption("Space Shooter Tutorial")
 
 RED_SPACE_SHIP = pygame.image.load(
-    os.path.join("../../Downloads/Space-Shooter-Tutorial/Space Shooter Tutorial/assets", "pixel_ship_red_small.png"))
+    os.path.join("./images/", "pixel_ship_red_small.png"))
 GREEN_SPACE_SHIP = pygame.image.load(os.path.join(
-    "../../Downloads/Space-Shooter-Tutorial/Space Shooter Tutorial/assets", "pixel_ship_green_small.png"))
+    "./images/", "pixel_ship_green_small.png"))
 BLUE_SPACE_SHIP = pygame.image.load(
-    os.path.join("../../Downloads/Space-Shooter-Tutorial/Space Shooter Tutorial/assets", "pixel_ship_blue_small.png"))
+    os.path.join("./images/", "pixel_ship_blue_small.png"))
 
 YELLOW_SPACE_SHIP = pygame.image.load(os.path.join(
-    "../../Downloads/Space-Shooter-Tutorial/Space Shooter Tutorial/assets", "pixel_ship_yellow.png"))
+    "./images/", "pixel_ship_yellow.png"))
 
 RED_LASER = pygame.image.load(
-    os.path.join("../../Downloads/Space-Shooter-Tutorial/Space Shooter Tutorial/assets", "pixel_laser_red.png"))
+    os.path.join("./images/", "pixel_laser_red.png"))
 GREEN_LASER = pygame.image.load(
-    os.path.join("../../Downloads/Space-Shooter-Tutorial/Space Shooter Tutorial/assets", "pixel_laser_green.png"))
+    os.path.join("./images/", "pixel_laser_green.png"))
 BLUE_LASER = pygame.image.load(
-    os.path.join("../../Downloads/Space-Shooter-Tutorial/Space Shooter Tutorial/assets", "pixel_laser_blue.png"))
+    os.path.join("./images/", "pixel_laser_blue.png"))
 YELLOW_LASER = pygame.image.load(
-    os.path.join("../../Downloads/Space-Shooter-Tutorial/Space Shooter Tutorial/assets", "pixel_laser_yellow.png"))
+    os.path.join("./images/", "pixel_laser_yellow.png"))
 
 BG = pygame.transform.scale(pygame.image.load(os.path.join(
-    "../../Downloads/Space-Shooter-Tutorial/Space Shooter Tutorial/assets", "background-black.png")), (WIDTH, HEIGHT))
+    "./images/", "background-black.png")), (WIDTH, HEIGHT))
 
 
 class Laser:
@@ -243,7 +243,7 @@ def main():
             enemy.move(enemy_vel)
             enemy.move_lasers(laser_vel, player)
 
-            if random.randrange(0, 2 * 60) == 1:
+            if random.randrange(0, 2 * 90) == 1:
                 enemy.shoot()
 
             if collide(enemy, player):
