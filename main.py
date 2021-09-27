@@ -1,3 +1,4 @@
+#Timothy Bender
 import pygame
 import os
 import time
